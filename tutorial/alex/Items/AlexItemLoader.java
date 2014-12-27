@@ -40,6 +40,7 @@ public class AlexItemLoader {
 	public static void mainRegistry(){
 		initializeItem();
 		registerItem();
+		AlexSuppliesLoader.mainRegistry();
 	}
 
 	public static void initializeItem() {
