@@ -10,7 +10,7 @@
 /* 11 */     setMaxStackSize(64);
 /* 12 */     setUnlocalizedName("whatIngot");
 /* 13 */	 setCreativeTab(alex.tabGodcraft);
-/* 14 */	 setTextureName("alexmodid:whoingot");
+/* 14 */	 setTextureName("alexmodid:whatingot");
 /*    */   }
 /*    */ }
 

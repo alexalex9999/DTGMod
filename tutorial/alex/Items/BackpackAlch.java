@@ -9,6 +9,7 @@ public class BackpackAlch extends AlchemyItem{
 		setUnlocalizedName("backpackAlch");
 		setCreativeTab(alex.tabGodcraft);
 		setTextureName("alexmodid:backpackAlch");
+		setLevel(1);
 	}
 
 }
