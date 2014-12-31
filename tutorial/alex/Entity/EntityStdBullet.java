@@ -11,15 +11,12 @@ public class EntityStdBullet extends EntityThrowable{
 
 	public EntityStdBullet(World par1World) {
 		super(par1World);
-		setThrowableHeading(this.motionX, this.motionY, this.motionZ, 3.0F, 1.0F);
 	}
 	public EntityStdBullet(World par1World, EntityLivingBase par2EntityLivingBase){
         super(par1World, par2EntityLivingBase);
-        setThrowableHeading(this.motionX, this.motionY, this.motionZ, 3.0F, 1.0F);
     }
 	public EntityStdBullet(World par1World, double par2, double par4, double par6){
         super(par1World, par2, par4, par6);
-        setThrowableHeading(this.motionX, this.motionY, this.motionZ, 3.0F, 1.0F);
     }
 
 	@Override
@@ -31,7 +28,7 @@ public class EntityStdBullet extends EntityThrowable{
 
         for (int i = 0; i < 8; ++i)
         {
-            this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+            this.worldObj.spawnParticle("crit", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
         }
 
         if (!this.worldObj.isRemote)
@@ -41,9 +38,9 @@ public class EntityStdBullet extends EntityThrowable{
 		
 	}
 	@Override
-	protected float getGravityVelocity() 
-	{
-		return 0.0f;
+	protected float func_70182_d(){
+		return 7.5f;
+		
 	}
 
 }

@@ -21,7 +21,7 @@ public class AlexEntityManager {
 	    int primaryColor = rand.nextInt() * 16777215;
 	    int secondaryColor = rand.nextInt() * 16777215; 
 	    EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
-	    EntityRegistry.registerModEntity(entityClass, name, entityID, alex.instance, 64, 1, true);
+	    EntityRegistry.registerModEntity(entityClass, name, entityID, alex.instance, 512, 1, true);
 	    EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
 	}
 	public static void intitializeEntities(){

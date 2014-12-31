@@ -55,10 +55,11 @@ public class RenderStdBullet extends Render{
 		// do whatever transformations you need, then render
 		
 		// typically you will at least want to translate for x/y/z position:
-		GL11.glTranslated(x + Math.cos(0.0174532925 * entity.rotationYaw), y - 7.5f, z + Math.sin(0.0174532925 * entity.rotationYaw));
-		GL11.glRotatef(entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * partialTick, 0.0F, 1.0F, 0.0F);
-        GL11.glRotatef(entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTick, 0.0F, 0.0F, 1.0F);
-		
+		GL11.glTranslated(x, y, z);
+		GL11.glRotatef(entity.rotationYaw, 0F, 1F, 0F);
+		GL11.glRotatef(-entity.rotationPitch, 1F, 0F, 0F);
+		GL11.glScalef(0.5f, 0.5f, 0.5f);
+	
 		// if you are using a model, you can do so like this:
 		model.render(entity, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 		
