@@ -58,6 +58,7 @@ import tutorial.alex.Items.AlexItemLoader;
 /*     */ import tutorial.alex.Items.WhatPick;
 /*     */ import tutorial.alex.Items.WhatShovel;
 /*     */ import tutorial.alex.Items.WhatSword;
+import tutorial.alex.Render.AlexEntityManager;
 /*     */ import tutorial.alex.Render.CommonProxy;
 /*     */ import tutorial.alex.Render.MyGenerator;
 /*     */ 
@@ -104,10 +105,9 @@ import tutorial.alex.Items.AlexItemLoader;
 /*     */   @Mod.EventHandler
 /*     */   public void load(FMLPreInitializationEvent event)
 /*     */   {
-/* 138 */     registerEntity(EntityTest.class, "entityTest");
-/* 139 */     registerEntity(EntityTwin.class, "entityTwin");
 			  AlexBlockLoader.mainRegistry();
 /* 141 */     AlexItemLoader.mainRegistry();
+			  AlexEntityManager.mainRegistry();
 /* 197 */     proxy.registerRenderInformation();
 /*     */   }
 /*     */ 
