@@ -1,5 +1,7 @@
 package tutorial.alex.Items;
 
+import java.util.Arrays;
+
 import com.google.common.collect.Multimap;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -18,6 +20,7 @@ public class CheapBayonet extends AlchemyGun{
 		setUnlocalizedName("cheapBayonet");
 		setCreativeTab(alex.tabGodcraft);
 		setTextureName("alexmodid:CheapBayonet");
+		setParents(Arrays.asList(AlexSuppliesLoader.rifle, AlexSuppliesLoader.cheapSword));
 	}
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
 	  {

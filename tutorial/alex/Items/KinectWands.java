@@ -1,5 +1,7 @@
 package tutorial.alex.Items;
 
+import java.util.Arrays;
+
 import net.minecraftforge.common.util.EnumHelper;
 import tutorial.alex.alex;
 
@@ -10,6 +12,7 @@ public class KinectWands extends AlchemySword{
 		setUnlocalizedName("kinectWands");
 		setCreativeTab(alex.tabGodcraft);
 		setTextureName("alexmodid:KinectWands");
+		setParents(Arrays.asList(AlexSuppliesLoader.knittingNeedles, AlexSuppliesLoader.xbox360));
 	}
 
 }
