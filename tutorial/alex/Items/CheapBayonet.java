@@ -1,17 +1,23 @@
 package tutorial.alex.Items;
 
+import com.google.common.collect.Multimap;
+
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import tutorial.alex.alex;
 import tutorial.alex.Entity.EntityStdBullet;
 
-public class Rifle extends AlchemyGun{
-	public Rifle(){
+
+public class CheapBayonet extends AlchemyGun{
+	public CheapBayonet(){
 		super();
-		setUnlocalizedName("rifle");
+		setUnlocalizedName("cheapBayonet");
 		setCreativeTab(alex.tabGodcraft);
-		setTextureName("alexmodid:Rifle");
+		setTextureName("alexmodid:CheapBayonet");
 	}
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
 	  {
@@ -22,5 +28,10 @@ public class Rifle extends AlchemyGun{
 	      }
 	      return par1ItemStack;
 	  }
-
+	public Multimap getItemAttributeModifiers()
+    {
+        Multimap multimap = super.getItemAttributeModifiers();
+        multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", (double)4.0f, 0));
+        return multimap;
+    }
 }

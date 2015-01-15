@@ -10,7 +10,7 @@ public class AlexSuppliesLoader extends AlexItemLoader{
 	public static AlchemySword knittingNeedles;
 	public static AlchemyItem xbox360;
 	public static AlchemyGun rifle;
-	
+
 	public static void mainRegistry(){
 		initializeItem();
 		registerItem();

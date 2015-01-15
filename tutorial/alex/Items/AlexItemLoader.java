@@ -41,6 +41,7 @@ public class AlexItemLoader {
 		initializeItem();
 		registerItem();
 		AlexSuppliesLoader.mainRegistry();
+		AlexAlchemiesLoader.mainRegistry();
 	}
 
 	public static void initializeItem() {
