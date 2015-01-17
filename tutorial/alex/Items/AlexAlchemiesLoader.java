@@ -6,6 +6,7 @@ public class AlexAlchemiesLoader extends AlexItemLoader{
 	public static AlchemySword kinectWands;
 	public static AlchemyGun cheapBayonet;
 	public static AlchemyGun storageShotgun;
+	public static AlchemySword windowsStopWorking;
 	
 	public static void mainRegistry(){
 		initializeItem();
@@ -15,12 +16,13 @@ public class AlexAlchemiesLoader extends AlexItemLoader{
 		kinectWands = new KinectWands(null);
 		cheapBayonet = new CheapBayonet();
 		storageShotgun = new StorageShotgun();
+		windowsStopWorking = new WindowsStopWorking(null);
 	}
 	public static void registerItem(){
 		System.out.println("Registering Alchemies");
 		GameRegistry.registerItem(kinectWands, "kinectWands");
 		GameRegistry.registerItem(cheapBayonet, "cheapBayonet");
 		GameRegistry.registerItem(storageShotgun, "storageShotgun");
-		
+		GameRegistry.registerItem(windowsStopWorking, "windowsStopWorking");
 	}
 }

@@ -46,4 +46,6 @@ item.knittingNeedles.name=Knitting Needles
 item.rifle.name=Rifle
 item.xbox360.name=Xbox 360
 item.kinectWands.name=Kinect Wands
-item.cheapBayonet.name=Cheap Bayonet.
+item.cheapBayonet.name=Cheap Bayonet
+item.storageShotgun.name=Storage Shotgun
+item.windowsStopWorking.name=Windows Stop Working
