@@ -7,7 +7,7 @@ import tutorial.alex.alex;
 
 public class WindowsStopWorking extends AlchemySword{
 	public WindowsStopWorking(ToolMaterial material){
-		super(EnumHelper.addToolMaterial("WindowsStopWorking", 0, 750, 0.2f, 3.0f, 0));
+		super(EnumHelper.addToolMaterial("WindowsStopWorking", 0, 750, 0.4f, 3.0f, 0));
 		setUnlocalizedName("windowsStopWorking");
 		setCreativeTab(alex.tabGodcraft);
 		setTextureName("alexmodid:WindowsStopWorking");
