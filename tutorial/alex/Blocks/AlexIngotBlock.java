@@ -2,7 +2,7 @@
 /*    */ 
 /*    */ import net.minecraft.block.Block;
 /*    */ import net.minecraft.block.material.Material;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class AlexIngotBlock extends Block
 /*    */ {
@@ -12,7 +12,7 @@
 /* 12 */     setHardness(4.0F);
 /* 13 */     setStepSound(Block.soundTypeMetal);
 /* 14 */     setBlockName("AlchemizedBlock");
-/* 15 */     setCreativeTab(alex.tabGodcraft);
+/* 15 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 16 */     setHarvestLevel("pickaxe", 1);
 /* 17 */     setBlockTextureName("alexmodid:stableblock");
 /*    */   }

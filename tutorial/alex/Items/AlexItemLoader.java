@@ -1,7 +1,7 @@
 package tutorial.alex.Items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import tutorial.alex.alex;
+import tutorial.alex.AlexMainRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -45,7 +45,7 @@ public class AlexItemLoader {
 	}
 
 	public static void initializeItem() {
-		alexItem = new AlexItem(5000).setCreativeTab(alex.tabGodcraft).setTextureName("alexmodid:unstable");
+		alexItem = new AlexItem(5000).setCreativeTab(AlexMainRegistry.tabGodcraft).setTextureName("alexmodid:unstable");
 		alexIngot = new AlexIngot();
 		uunIngot = new UunIngot();
 		alchemizedAxe = new StableAxe(null);

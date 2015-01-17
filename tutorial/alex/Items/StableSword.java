@@ -3,7 +3,7 @@
 /*    */ import net.minecraft.item.Item;
 		 import net.minecraft.item.Item.ToolMaterial;
 /*    */ import net.minecraft.item.ItemSword;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class StableSword extends ItemSword
 /*    */ {
@@ -11,7 +11,7 @@
 /*    */   {
 /* 11 */     super(AlexItemLoader.ALCHEMIZED);
 /* 12 */     setUnlocalizedName("alchemizedSword");
-/* 13 */     setCreativeTab(alex.tabGodcraft);
+/* 13 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 14 */     setTextureName("alexmodid:stablesword");
 /*    */   }
 /*    */ }

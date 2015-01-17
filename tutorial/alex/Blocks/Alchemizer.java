@@ -9,7 +9,7 @@
 /*    */ import net.minecraft.tileentity.TileEntity;
 /*    */ import net.minecraft.util.IIcon;
 /*    */ import net.minecraft.world.World;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class Alchemizer extends BlockContainer
 /*    */ {
@@ -26,7 +26,7 @@
 /* 21 */     setHardness(4.0F);
 /* 22 */     setStepSound(Block.soundTypeMetal);
 /* 23 */     setBlockName("Alchemizer");
-/* 24 */     setCreativeTab(alex.tabGodcraft);
+/* 24 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 25 */     setHarvestLevel("pickaxe", 1);
 /* 26 */     setBlockTextureName("alexmodid:alchemizer");
 /*    */   }

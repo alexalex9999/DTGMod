@@ -63,7 +63,7 @@ import tutorial.alex.Render.AlexEntityManager;
 /*     */ import tutorial.alex.Render.MyGenerator;
 /*     */ 
 /*     */ @Mod(modid="alexmodid", name="DTG", version="0.2.1ALPHA")
-/*     */ public class alex
+/*     */ public class AlexMainRegistry
 /*     */ {
 /*     */   public static final String MODID = "alexmodid";
 /*     */   public static final String VERSION = "0.2.1ALPHA";
@@ -81,7 +81,7 @@ import tutorial.alex.Render.AlexEntityManager;
 /*  99 */   
 /*     */ 
 /*     */   @Mod.Instance("alexmodid")
-/*     */   public static alex instance;
+/*     */   public static AlexMainRegistry instance;
 /*     */ 
 /*     */   @SidedProxy(clientSide="tutorial.alex.client.ClientProxy", serverSide="tutorial.alex.CommonProxy")
 /*     */   public static CommonProxy proxy;

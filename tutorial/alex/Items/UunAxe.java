@@ -3,7 +3,7 @@
 /*    */ import net.minecraft.item.Item;
 		 import net.minecraft.item.Item.ToolMaterial;
 /*    */ import net.minecraft.item.ItemAxe;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class UunAxe extends ItemAxe
 /*    */ {
@@ -11,7 +11,7 @@
 /*    */   {
 /* 10 */     super(AlexItemLoader.UUN);
 /* 11 */     setUnlocalizedName("uunAxe");
-/* 12 */     setCreativeTab(alex.tabGodcraft);
+/* 12 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 13 */     setTextureName("alexmodid:uunaxe");
 /*    */   }
 /*    */ }

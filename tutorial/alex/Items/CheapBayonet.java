@@ -10,7 +10,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import tutorial.alex.alex;
+import tutorial.alex.AlexMainRegistry;
 import tutorial.alex.Entity.EntityStdBullet;
 
 
@@ -18,9 +18,10 @@ public class CheapBayonet extends AlchemyGun{
 	public CheapBayonet(){
 		super();
 		setUnlocalizedName("cheapBayonet");
-		setCreativeTab(alex.tabGodcraft);
+		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:CheapBayonet");
-		setParents(Arrays.asList(AlexSuppliesLoader.rifle, AlexSuppliesLoader.cheapSword));
+		Object[] parentArray = {AlexSuppliesLoader.rifle, AlexSuppliesLoader.cheapSword};
+		setParents(parentArray);
 	}
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
 	  {

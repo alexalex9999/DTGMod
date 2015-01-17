@@ -3,7 +3,7 @@
 /*    */ import net.minecraft.item.Item;
 		 import net.minecraft.item.Item.ToolMaterial;
 /*    */ import net.minecraft.item.ItemSpade;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class WhatShovel extends ItemSpade
 /*    */ {
@@ -11,7 +11,7 @@
 /*    */   {
 /* 11 */     super(AlexItemLoader.WHAT);
 /* 12 */     setUnlocalizedName("whatShovel");
-/* 13 */     setCreativeTab(alex.tabGodcraft);
+/* 13 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 14 */     setTextureName("alexmodid:whatshovel");
 /*    */   }
 /*    */ }

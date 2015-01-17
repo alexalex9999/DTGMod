@@ -8,7 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import tutorial.alex.alex;
+import tutorial.alex.AlexMainRegistry;
 import tutorial.alex.Entity.EntityStdBullet;
 import tutorial.alex.Entity.EntityStorageShotgunBullet;
 
@@ -18,9 +18,10 @@ public class StorageShotgun extends AlchemyGun{
 	public StorageShotgun(){
 		super();
 		setUnlocalizedName("storageShotgun");
-		setCreativeTab(alex.tabGodcraft);
+		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:StorageShotgun");
-		setParents(Arrays.asList(AlexSuppliesLoader.rifle, AlexSuppliesLoader.backpackAlch));
+		Object[] parentArray = {AlexSuppliesLoader.rifle, AlexSuppliesLoader.backpackAlch};
+		setParents(parentArray);
 		this.insertedBlock = Blocks.tnt;
 		this.insertedItem = null;
 	}

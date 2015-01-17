@@ -15,13 +15,13 @@ public class AlchemyGun extends Item{
 	public boolean needsCharging;
 	public boolean oneUse;
 	public int chargingTime;
-	public List<Item> parents;
+	public Object[] parents;
 	public AlchemyGun(){
 		this.level = 1;
 		this.needsCharging = false;
 		this.chargingTime = 0;
 		this.oneUse = false;
-		this.parents = new ArrayList<Item>();
+		this.parents = new Object[0];
 	}
 	public void setLevel(int level){
 		this.level = level;
@@ -38,7 +38,7 @@ public class AlchemyGun extends Item{
 	public void setOneShot(boolean oneUse){
 		this.oneUse = oneUse;
 	}
-	public void setParents(List<Item> parents){
+	public void setParents(Object[] parents){
 		this.parents = parents;
 	}
 

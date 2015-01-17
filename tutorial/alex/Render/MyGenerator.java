@@ -8,7 +8,7 @@
 /*    */ import net.minecraft.world.WorldProvider;
 /*    */ import net.minecraft.world.chunk.IChunkProvider;
 /*    */ import net.minecraft.world.gen.feature.WorldGenMinable;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 import tutorial.alex.Blocks.AlexBlockLoader;
 /*    */ 
 /*    */ public class MyGenerator
