@@ -4,6 +4,7 @@ import java.util.Random;
 
 import tutorial.alex.alex;
 import tutorial.alex.Entity.EntityStdBullet;
+import tutorial.alex.Entity.EntityStorageShotgunBullet;
 import tutorial.alex.Entity.EntityTest;
 import tutorial.alex.Entity.EntityTwin;
 import net.minecraft.entity.EntityList;
@@ -28,5 +29,6 @@ public class AlexEntityManager {
 		registerEntity(EntityTest.class, "entityTest");
 		registerEntity(EntityTwin.class, "entityTwin");
 		EntityRegistry.registerModEntity(EntityStdBullet.class, "Standard Bullet", EntityRegistry.findGlobalUniqueEntityId(), alex.instance, 64, 10, true);
+		EntityRegistry.registerModEntity(EntityStorageShotgunBullet.class, "Storage Shotgun Bullet", EntityRegistry.findGlobalUniqueEntityId(), alex.instance, 64, 10, true);
 	}
 }
