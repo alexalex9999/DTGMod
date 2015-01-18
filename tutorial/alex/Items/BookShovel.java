@@ -3,7 +3,7 @@
 /*    */ import net.minecraft.item.Item;
 		 import net.minecraft.item.Item.ToolMaterial;
 /*    */ import net.minecraft.item.ItemSpade;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class BookShovel extends ItemSpade
 /*    */ {
@@ -11,7 +11,7 @@
 /*    */   {
 /* 11 */     super(AlexItemLoader.BOOK);
 /* 12 */     setUnlocalizedName("bookShovel");
-/* 13 */     setCreativeTab(alex.tabGodcraft);
+/* 13 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 14 */     setTextureName("alexmodid:bookshovel");
 /*    */   }
 /*    */ }

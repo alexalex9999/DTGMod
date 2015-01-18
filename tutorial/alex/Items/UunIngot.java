@@ -1,5 +1,5 @@
 /*    */ package tutorial.alex.Items;
-import tutorial.alex.alex;
+import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ import net.minecraft.item.Item;
 /*    */ 
@@ -9,7 +9,7 @@ import tutorial.alex.alex;
 /*    */   {
 /* 11 */     setMaxStackSize(64);
 /* 12 */     setUnlocalizedName("uunIngot");
-			 setCreativeTab(alex.tabGodcraft);
+			 setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 13 */     setTextureName("alexmodid:uun");
 /*    */   }
 /*    */ }

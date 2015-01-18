@@ -1,5 +1,8 @@
 package tutorial.alex.Items;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBow;
@@ -12,10 +15,31 @@ public class AlchemyGun extends Item{
 	public boolean needsCharging;
 	public boolean oneUse;
 	public int chargingTime;
-	public AlchemyGun(int level, boolean needsCharging, boolean oneUse, int chargingTime){
-		this.level = level;
-		this.needsCharging = needsCharging;
-		this.oneUse = oneUse;
-		this.chargingTime = chargingTime;
+	public Object[] parents;
+	public AlchemyGun(){
+		this.level = 1;
+		this.needsCharging = false;
+		this.chargingTime = 0;
+		this.oneUse = false;
+		this.parents = new Object[0];
 	}
+	public void setLevel(int level){
+		this.level = level;
+	}
+	public void setCharging(boolean needsCharging, int chargingTime){
+		this.needsCharging = needsCharging;
+		if (needsCharging){
+			this.chargingTime = chargingTime;
+		}
+		else{
+			this.chargingTime = 0;
+		}
+	}
+	public void setOneShot(boolean oneUse){
+		this.oneUse = oneUse;
+	}
+	public void setParents(Object[] parents){
+		this.parents = parents;
+	}
+
 }

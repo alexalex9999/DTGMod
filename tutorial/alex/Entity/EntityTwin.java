@@ -33,7 +33,7 @@
 /*     */ import tutorial.alex.Entity.Attacks.TwinSpawn;
 /*     */ import tutorial.alex.Entity.Attacks.TwinTeleport;
 import tutorial.alex.Items.AlexItemLoader;
-/*     */ import tutorial.alex.alex;
+/*     */ import tutorial.alex.AlexMainRegistry;
 /*     */ 
 /*     */ public class EntityTwin extends EntityMob
 /*     */   implements IBossDisplayData

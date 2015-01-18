@@ -1,7 +1,7 @@
 /*    */ package tutorial.alex.Items;
 /*    */ 
 /*    */ import net.minecraft.item.Item;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class BookIngot extends Item
 /*    */ {
@@ -10,7 +10,7 @@
 /* 10 */     setMaxStackSize(64);
 /* 11 */     setUnlocalizedName("bookIngot");
 /* 12 */     setTextureName("alexmodid:bookingot");
-/* 13 */     setCreativeTab(alex.tabGodcraft);
+/* 13 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /*    */   }
 /*    */ }
 

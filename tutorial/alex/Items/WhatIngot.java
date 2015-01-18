@@ -1,5 +1,5 @@
 /*    */ package tutorial.alex.Items;
-/*	  */ import tutorial.alex.alex;
+/*	  */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ import net.minecraft.item.Item;
 /*    */ 
@@ -9,7 +9,7 @@
 /*    */   {
 /* 11 */     setMaxStackSize(64);
 /* 12 */     setUnlocalizedName("whatIngot");
-/* 13 */	 setCreativeTab(alex.tabGodcraft);
+/* 13 */	 setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 14 */	 setTextureName("alexmodid:whatingot");
 /*    */   }
 /*    */ }

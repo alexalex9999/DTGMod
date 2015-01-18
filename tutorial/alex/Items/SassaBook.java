@@ -1,7 +1,7 @@
 /*    */ package tutorial.alex.Items;
 /*    */ 
 /*    */ import net.minecraft.item.Item;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class SassaBook extends Item
 /*    */ {
@@ -10,7 +10,7 @@
 /* 10 */     setMaxStackSize(64);
 /* 11 */     setUnlocalizedName("sassy");
 /* 12 */     setTextureName("alexmodid:sassa");
-/* 13 */     setCreativeTab(alex.tabGodcraft);
+/* 13 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /*    */   }
 /*    */ }
 

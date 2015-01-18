@@ -2,7 +2,7 @@ package tutorial.alex.Blocks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import tutorial.alex.Blocks.*;
-import tutorial.alex.alex;
+import tutorial.alex.AlexMainRegistry;
 public class AlexBlockLoader {
 	public static Block alexIngotBlock;
 	public static Block unstableOre;
@@ -13,6 +13,8 @@ public class AlexBlockLoader {
 	public static void mainRegistry(){
 		initializeBlock();
 		registerItem();
+		AlexAlchemyBlockLoader.mainRegistry();
+		
 	};
 
 	public static void initializeBlock() {

@@ -5,7 +5,7 @@
 /*    */ import net.minecraft.block.Block;
 /*    */ import net.minecraft.block.material.Material;
 /*    */ import net.minecraft.item.Item;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 import tutorial.alex.Items.AlexItemLoader;
 /*    */ 
 /*    */ public class UnstableOre extends Block
@@ -16,7 +16,7 @@ import tutorial.alex.Items.AlexItemLoader;
 /* 15 */     setHardness(10.5F);
 /* 16 */     setStepSound(Block.soundTypeStone);
 /* 17 */     setBlockName("unstableOre");
-/* 18 */     setCreativeTab(alex.tabGodcraft);
+/* 18 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 19 */     setHarvestLevel("pickaxe", 3);
 /* 20 */     setBlockTextureName("alexmodid:unstablealchemized");
 /*    */   }

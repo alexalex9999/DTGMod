@@ -4,7 +4,7 @@
 /*    */ import net.minecraft.block.Block;
 /*    */ import net.minecraft.block.material.Material;
 /*    */ import net.minecraft.item.Item;
-/*    */ import tutorial.alex.alex;
+/*    */ import tutorial.alex.AlexMainRegistry;
 /*    */ 
 /*    */ public class AlchemizedOre extends Block
 /*    */ {
@@ -14,7 +14,7 @@
 /* 15 */     setHardness(3.5F);
 /* 16 */     setStepSound(Block.soundTypeStone);
 /* 17 */     setBlockName("alchemizedOre");
-/* 18 */     setCreativeTab(alex.tabGodcraft);
+/* 18 */     setCreativeTab(AlexMainRegistry.tabGodcraft);
 /* 19 */     setHarvestLevel("pickaxe", 2);
 /* 20 */     setBlockTextureName("alexmodid:stablealchemized");
 /*    */   }

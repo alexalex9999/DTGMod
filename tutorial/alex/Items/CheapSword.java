@@ -1,13 +1,13 @@
 package tutorial.alex.Items;
 
-import tutorial.alex.alex;
+import tutorial.alex.AlexMainRegistry;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class CheapSword extends AlchemySword{
 	public CheapSword(ToolMaterial material){
 		super(EnumHelper.addToolMaterial("CheapSword", 0, 100, 0.0F, -1.0F, 0));
 		setUnlocalizedName("cheapSword");
-		setCreativeTab(alex.tabGodcraft);
+		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:CheapSword");
 		setLevel(1);
 		
