@@ -8,7 +8,7 @@ import tutorial.alex.AlexMainRegistry;
 public class KinectWands extends AlchemySword{
 
 	public KinectWands(ToolMaterial material) {
-		super(EnumHelper.addToolMaterial("KinectWands", 0, 750, 0.2f, 2.5f, 0));
+		super(EnumHelper.addToolMaterial("KinectWands", 0, 750, 0.2f, 2.0f, 0));
 		setUnlocalizedName("kinectWands");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:KinectWands");

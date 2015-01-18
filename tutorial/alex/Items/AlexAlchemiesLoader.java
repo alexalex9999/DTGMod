@@ -9,6 +9,7 @@ public class AlexAlchemiesLoader extends AlexItemLoader{
 	public static AlchemySword windowsStopWorking;
 	public static AlchemyGun iShoot;
 	public static AlchemyGun bindingOfScythes;
+	public static AlchemySword XPBOX;
 	
 	public static void mainRegistry(){
 		initializeItem();
@@ -21,6 +22,7 @@ public class AlexAlchemiesLoader extends AlexItemLoader{
 		windowsStopWorking = new WindowsStopWorking(null);
 		iShoot = new iShoot();
 		bindingOfScythes = new BindingOfScythes();
+		XPBOX = new XPBOX(null);
 	}
 	public static void registerItem(){
 		System.out.println("Registering Alchemies");
@@ -30,5 +32,6 @@ public class AlexAlchemiesLoader extends AlexItemLoader{
 		GameRegistry.registerItem(windowsStopWorking, "windowsStopWorking");
 		GameRegistry.registerItem(iShoot, "iShoot");
 		GameRegistry.registerItem(bindingOfScythes, "bindingOfScythes");
+		GameRegistry.registerItem(XPBOX, "XPBOX");
 	}
 }
