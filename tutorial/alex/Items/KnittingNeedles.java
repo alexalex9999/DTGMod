@@ -9,5 +9,6 @@ public class KnittingNeedles extends AlchemySword{
 		setUnlocalizedName("knittingNeedles");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:KnittingNeedles");
+		setLevel(0);
 	}
 }

@@ -9,7 +9,7 @@ public class CheapSword extends AlchemySword{
 		setUnlocalizedName("cheapSword");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:CheapSword");
-		setLevel(1);
+		setLevel(0);
 		
 	}
 }

@@ -2,13 +2,13 @@ package tutorial.alex.Items;
 
 import tutorial.alex.AlexMainRegistry;
 
-public class Xbox360 extends AlchemyItem{
-	public Xbox360(){
+public class Battery extends AlchemyItem{
+	public Battery(){
 		super();
 		setMaxStackSize(64);
-		setUnlocalizedName("xbox360");
+		setUnlocalizedName("battery");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
-		setTextureName("alexmodid:Xbox 360");
+		setTextureName("alexmodid:battery");
 		setLevel(0);
 	}
 }
