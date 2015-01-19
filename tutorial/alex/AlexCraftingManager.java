@@ -21,7 +21,16 @@ public class AlexCraftingManager {
 	public static ItemStack twinswordStack = new ItemStack(AlexItemLoader.twinSword);
 	public static ItemStack uunStack = new ItemStack(AlexItemLoader.uunIngot);
 	public static ItemStack uunoreStack = new ItemStack(AlexBlockLoader.uunOre);
-	
+	public static ItemStack ironingotStack = new ItemStack(Items.iron_ingot);
+	public static ItemStack ironblockStack = new ItemStack(Blocks.iron_block);
+	public static ItemStack redstoneStack = new ItemStack(Items.redstone);
+	public static ItemStack redstoneblockStack = new ItemStack(Blocks.redstone_block);
+	public static ItemStack cobbleStack = new ItemStack(Blocks.cobblestone);
+	public static ItemStack woodStack = new ItemStack(Blocks.planks);
+	public static ItemStack gunpowderStack = new ItemStack(Items.gunpowder);
+	public static ItemStack woolStack = new ItemStack(Blocks.wool);
+	public static ItemStack leatherStack = new ItemStack(Items.leather);
+	public static ItemStack stringStack = new ItemStack(Items.string);
 	public static void mainRegistry(){
 		addCraftingRec();
 		addSmeltingRec();
@@ -55,7 +64,11 @@ public class AlexCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.uunShovel), new Object[] { " x ", " y ", " y ", Character.valueOf('x'), uunStack, Character.valueOf('y'), stickStack });
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.uunSword), new Object[] { " x ", " x ", " y ", Character.valueOf('x'), uunStack, Character.valueOf('y'), stickStack });
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.uunPick), new Object[] { "xxx", " y ", " y ", Character.valueOf('x'), uunStack, Character.valueOf('y'), stickStack });
-		
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.hammer), new Object[] {" xx", " yx", "y  ", Character.valueOf('x'), cobbleStack, Character.valueOf('y'), stickStack});
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.rifle), new Object[] {" x ", "xyz", "z  ", Character.valueOf('x'), ironingotStack, Character.valueOf('y'), gunpowderStack, Character.valueOf('z'), woodStack });
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.knittingneedles), new Object[] {"x x", "x x", "y y", Character.valueOf('x'), stickStack, Character.valueOf('y'), woolStack});
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.backpackAlch), new Object[] {"x x", "xyx", "x x", Character.valueOf('x'), leatherStack, Character.valueOf('y'), stringStack});
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.sassy), new Object[] {"xyx", "yzy", "xyx", Character.valueOf('x'), diamondsStack, Character.valueOf('y'), alexItemStack, Character.valueOf('z'), bookStack });
 	}
 
 	public static void addSmeltingRec() {
