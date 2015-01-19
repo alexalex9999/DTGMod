@@ -29,6 +29,7 @@ public class AlexItemLoader {
 	public static Item whatShovel;
 	public static Item whatIngot;
 	public static Item sassy;
+	public static Item barbaHole;
 	
 	public static final Item.ToolMaterial ALCHEMIZED = EnumHelper.addToolMaterial("ALCHEMIZED", 2, 413, 7.0F, 1.5F, 7);
 	public static final Item.ToolMaterial UNSTABLE = EnumHelper.addToolMaterial("UNSTABLE", 3, 1000, 4.0F, 3.0F, 30);
@@ -68,6 +69,7 @@ public class AlexItemLoader {
 		whatShovel = new WhatShovel(null);
 		whatSword = new WhatSword(null);
 		whatIngot = new WhatIngot();
+		barbaHole = new Barbahole();
 		
 	}
 
@@ -96,6 +98,7 @@ public class AlexItemLoader {
 		GameRegistry.registerItem(whatShovel, "whatShovel");
 		GameRegistry.registerItem(whatSword, "whatSword");
 		GameRegistry.registerItem(whatIngot, "whatIngot");
+		GameRegistry.registerItem(barbaHole, "barbaHole");
 		
 	}
 }
