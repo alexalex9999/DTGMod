@@ -37,12 +37,8 @@ public class AlexCraftingManager {
 	}
 
 	public static void addCraftingRec() {
-		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.alexIngot), new Object[] { " x ", "xyx", " x ", 
-			Character.valueOf('x'), diamondsStack, Character.valueOf('y'), obsidianStack });
-		GameRegistry.addSmelting(AlexBlockLoader.uunOre, new ItemStack(AlexItemLoader.uunIngot), 2.0F);
-		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.alexIngot), new Object[] { "xxx", "xxx", "xxx", 
-			Character.valueOf('x'), alexItemStack });
-		GameRegistry.addSmelting(AlexBlockLoader.alchemizedOre, new ItemStack(AlexItemLoader.alexIngot), 2.0F);
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.alexIngot), new Object[] { " x ", "xyx", " x ", Character.valueOf('x'), diamondsStack, Character.valueOf('y'), obsidianStack });
+		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.alexIngot), new Object[] { "xxx", "xxx", "xxx", Character.valueOf('x'), alexItemStack });
 		GameRegistry.addRecipe(new ItemStack(AlexBlockLoader.alexIngotBlock), new Object[] { "xxx", "xxx", "xxx", Character.valueOf('x'), alexIngotStack });
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.bookIngot), new Object[] { "xxx", "xyx", "xxx", Character.valueOf('x'), bookStack, Character.valueOf('y'), alexIngotStack });
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.bookAxe), new Object[] { "xx ", "xy ", " y ", Character.valueOf('x'), bookIngotStack, Character.valueOf('y'), stickStack });
@@ -73,7 +69,8 @@ public class AlexCraftingManager {
 
 	public static void addSmeltingRec() {
 		// TODO Auto-generated method stub
-		
+			GameRegistry.addSmelting(AlexBlockLoader.uunOre, new ItemStack(AlexItemLoader.uunIngot), 2.0F);	
+			GameRegistry.addSmelting(AlexBlockLoader.alchemizedOre, new ItemStack(AlexItemLoader.alexIngot), 2.0F);
 	}
 
 }
