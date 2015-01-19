@@ -5,6 +5,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class AlexSuppliesLoader extends AlexItemLoader{
 	public static AlchemyItem backpackAlch;
 	public static AlchemyItem battery;
+	public static AlchemyItem batteryPack;
 	public static AlchemySword cheapSword;
 	public static AlchemyItem computerAlch;
 	public static AlchemySword hammer;
@@ -19,6 +20,7 @@ public class AlexSuppliesLoader extends AlexItemLoader{
 	public static void initializeItem(){
 		backpackAlch = new BackpackAlch();
 		battery = new Battery();
+		batteryPack = new BatteryPack();
 		cheapSword = new CheapSword(null);
 		computerAlch = new ComputerAlch();
 		hammer = new Hammer(null);
@@ -29,6 +31,7 @@ public class AlexSuppliesLoader extends AlexItemLoader{
 	public static void registerItem(){
 		GameRegistry.registerItem(backpackAlch, "backpackAlch");
 		GameRegistry.registerItem(battery, "battery");
+		GameRegistry.registerItem(batteryPack, "batteryPack");
 		GameRegistry.registerItem(cheapSword, "cheapSword");
 		GameRegistry.registerItem(computerAlch, "computerAlch");
 		GameRegistry.registerItem(hammer, "hammer");

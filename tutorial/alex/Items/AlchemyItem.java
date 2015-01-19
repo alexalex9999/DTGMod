@@ -7,17 +7,17 @@ import net.minecraft.item.Item;
 
 public class AlchemyItem extends Item{
 	public int level;
-	public List<Item> parents;
+	public Object[] parents;
 
 	public AlchemyItem(){
 		this.level = 1;
-		this.parents = new ArrayList<Item>();
+		this.parents = new Object[0];
 		
 	}
 	public void setLevel(int level){
 		this.level = level;
 	}
-	public void setParents(List<Item> parents){
-		this.parents = parents;
+	public void setParents(Object[] parentArray){
+		this.parents = parentArray;
 	}
 }
