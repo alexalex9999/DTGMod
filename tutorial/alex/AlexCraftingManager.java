@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import tutorial.alex.Blocks.AlexBlockLoader;
 import tutorial.alex.Items.AlexItemLoader;
+import tutorial.alex.Items.AlexSuppliesLoader;
 
 public class AlexCraftingManager {
 	public static ItemStack diamondsStack = new ItemStack(Items.diamond);
@@ -60,10 +61,10 @@ public class AlexCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.uunShovel), new Object[] { " x ", " y ", " y ", Character.valueOf('x'), uunStack, Character.valueOf('y'), stickStack });
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.uunSword), new Object[] { " x ", " x ", " y ", Character.valueOf('x'), uunStack, Character.valueOf('y'), stickStack });
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.uunPick), new Object[] { "xxx", " y ", " y ", Character.valueOf('x'), uunStack, Character.valueOf('y'), stickStack });
-		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.hammer), new Object[] {" xx", " yx", "y  ", Character.valueOf('x'), cobbleStack, Character.valueOf('y'), stickStack});
-		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.rifle), new Object[] {" x ", "xyz", "z  ", Character.valueOf('x'), ironingotStack, Character.valueOf('y'), gunpowderStack, Character.valueOf('z'), woodStack });
-		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.knittingneedles), new Object[] {"x x", "x x", "y y", Character.valueOf('x'), stickStack, Character.valueOf('y'), woolStack});
-		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.backpackAlch), new Object[] {"x x", "xyx", "x x", Character.valueOf('x'), leatherStack, Character.valueOf('y'), stringStack});
+		GameRegistry.addRecipe(new ItemStack(AlexSuppliesLoader.hammer), new Object[] {" xx", " yx", "y  ", Character.valueOf('x'), cobbleStack, Character.valueOf('y'), stickStack});
+		GameRegistry.addRecipe(new ItemStack(AlexSuppliesLoader.rifle), new Object[] {" x ", "xyz", "z  ", Character.valueOf('x'), ironingotStack, Character.valueOf('y'), gunpowderStack, Character.valueOf('z'), woodStack });
+		GameRegistry.addRecipe(new ItemStack(AlexSuppliesLoader.knittingNeedles), new Object[] {"x x", "x x", "y y", Character.valueOf('x'), stickStack, Character.valueOf('y'), woolStack});
+		GameRegistry.addRecipe(new ItemStack(AlexSuppliesLoader.backpackAlch), new Object[] {"x x", "xyx", "x x", Character.valueOf('x'), leatherStack, Character.valueOf('y'), stringStack});
 		GameRegistry.addRecipe(new ItemStack(AlexItemLoader.sassy), new Object[] {"xyx", "yzy", "xyx", Character.valueOf('x'), diamondsStack, Character.valueOf('y'), alexItemStack, Character.valueOf('z'), bookStack });
 	}
 
