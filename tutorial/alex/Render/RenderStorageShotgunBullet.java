@@ -3,6 +3,7 @@ package tutorial.alex.Render;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import tutorial.alex.Entity.EntityStdBullet;
 import tutorial.alex.Entity.EntityStorageShotgunBullet;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -22,14 +23,27 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.ForgeHooksClient;
 
 public class RenderStorageShotgunBullet extends Render{
+	private final ResourceLocation texture = new ResourceLocation("/item/arrows.png");
 	public RenderStorageShotgunBullet(){
-		super();
 	 }
+	@Override
+	protected ResourceLocation getEntityTexture(Entity entity) {
+		// this method should return your texture, which may be different based
+		// on certain characteristics of your custom entity; if that is the case,
+		// you may want to make a second method that takes your class:
+		return getCustomTexture((EntityStorageShotgunBullet) entity);
+	}
+	
+	private ResourceLocation getCustomTexture(EntityStorageShotgunBullet entity) {
+		// now you have access to your custom entity fields and methods, if any,
+		// and can base the texture to return upon those
+		return texture;
+	}
 	@Override
 	public void doRender(Entity par1EntityArrow, double par2,
 			double par4, double par6, float p_76986_8_,
 			float par9) {
-		 this.bindTexture(new ResourceLocation("/item/arrows.png"));
+		 this.bindTexture(texture);
 		 GL11.glPushMatrix();
 		 GL11.glTranslatef((float)par2, (float)par4, (float)par6);
 		 GL11.glRotatef(par1EntityArrow.prevRotationYaw + (par1EntityArrow.rotationYaw - par1EntityArrow.prevRotationYaw) * par9 - 90.0F, 0.0F, 1.0F, 0.0F);
@@ -70,10 +84,5 @@ public class RenderStorageShotgunBullet extends Render{
 		 GL11.glDisable(GL12.GL_RESCALE_NORMAL);
 		 GL11.glPopMatrix();
 		
-	}
-	@Override
-	protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
