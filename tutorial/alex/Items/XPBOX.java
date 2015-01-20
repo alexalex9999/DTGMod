@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class XPBOX extends AlchemySword{
-	public IIcon[] icons = new IIcon[6];
+	public IIcon[] icons = new IIcon[7];
 	private float extra_damage;
 	public XPBOX(ToolMaterial material) {
 		super(EnumHelper.addToolMaterial("XPBOX", 0, -1, 0.4f, 3.0f, 0));
