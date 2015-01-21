@@ -9,6 +9,6 @@ public class Xbox360 extends AlchemyItem{
 		setUnlocalizedName("xbox360");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:Xbox 360");
-		setLevel(0);
+		setLevel((byte) 0);
 	}
 }

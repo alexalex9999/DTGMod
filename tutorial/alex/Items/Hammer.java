@@ -10,7 +10,7 @@ public class Hammer extends AlchemySword{
 		setUnlocalizedName("hammer");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:hammer");
-		setLevel(0);
+		setLevel((byte) 0);
 	}
 
 }

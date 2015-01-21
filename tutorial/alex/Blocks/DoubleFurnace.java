@@ -5,6 +5,7 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import scala.actors.threadpool.Arrays;
+import tutorial.alex.Alchemy;
 import tutorial.alex.AlexMainRegistry;
 import net.minecraft.block.BlockFurnace;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -16,9 +17,9 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class DoubleFurnace extends BlockFurnace{
-	public int level;
-	public Object[] parents = {Blocks.furnace, Blocks.furnace};
+public class DoubleFurnace extends BlockFurnace implements Alchemy{
+	private final byte level = 1;
+	private final Object[] parents = {Blocks.furnace, Blocks.furnace};
 	@SideOnly(Side.CLIENT)
     private IIcon topIcon;
     @SideOnly(Side.CLIENT)
@@ -28,7 +29,6 @@ public class DoubleFurnace extends BlockFurnace{
 	public DoubleFurnace(boolean p_i45407_1_) {
 		super(p_i45407_1_);
 		isOn = p_i45407_1_;
-		this.level = 1;
 		setBlockName("doubleFurnace");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 	}
@@ -76,4 +76,20 @@ public class DoubleFurnace extends BlockFurnace{
         this.frontIcon = p_149651_1_.registerIcon(this.isOn ? "DoubleFurnaceFrontOn" : "DoubleFurnaceFrontOff");
         this.topIcon = p_149651_1_.registerIcon("DoubleFurnaceTop");
     }
+	@Override
+	public void setLevel(byte level) {
+		
+	}
+	@Override
+	public byte getLevel() {
+		return 1;
+	}
+	@Override
+	public void setParents(Object[] parents) {
+		
+	}
+	@Override
+	public Object[] getParents() {
+		return parents;
+	}
 }

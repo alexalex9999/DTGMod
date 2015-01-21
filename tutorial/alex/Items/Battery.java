@@ -9,6 +9,6 @@ public class Battery extends AlchemyItem{
 		setUnlocalizedName("battery");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:battery");
-		setLevel(0);
+		setLevel((byte) 0);
 	}
 }

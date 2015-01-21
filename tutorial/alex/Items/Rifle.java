@@ -12,7 +12,7 @@ public class Rifle extends AlchemyGun{
 		setUnlocalizedName("rifle");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:Rifle");
-		setLevel(0);
+		setLevel((byte) 0);
 	}
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
 	  {

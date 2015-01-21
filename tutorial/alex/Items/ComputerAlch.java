@@ -9,6 +9,6 @@ public class ComputerAlch extends AlchemyItem{
 		setUnlocalizedName("computerAlch");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:computerAlch");
-		setLevel(0);
+		setLevel((byte) 0);
 	}
 }

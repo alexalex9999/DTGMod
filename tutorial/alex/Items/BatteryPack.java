@@ -9,7 +9,7 @@ public class BatteryPack extends AlchemyItem{
 		setUnlocalizedName("BatteryPack");
 		setCreativeTab(AlexMainRegistry.tabGodcraft);
 		setTextureName("alexmodid:batteryPack");
-		setLevel(1);
+		setLevel((byte) 1);
 		Object[] parentArray = {AlexSuppliesLoader.battery, AlexSuppliesLoader.backpackAlch};
 		setParents(parentArray);
 	}

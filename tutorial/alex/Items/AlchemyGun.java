@@ -3,28 +3,33 @@ package tutorial.alex.Items;
 import java.util.ArrayList;
 import java.util.List;
 
+import tutorial.alex.Alchemy;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-//Very WIP. Doesn't shoot.
-public class AlchemyGun extends Item{
-	public int level;
-	public boolean needsCharging;
-	public boolean oneUse;
-	public int chargingTime;
-	public Object[] parents;
+
+public class AlchemyGun extends Item implements Alchemy{
+	private byte level = 0;
+	private boolean needsCharging = false;
+	private int chargingTime = 0;
+	private boolean oneUse = false;
+	private Object[] parents = new Object[0];
 	public AlchemyGun(){
-		this.level = 1;
-		this.needsCharging = false;
-		this.chargingTime = 0;
-		this.oneUse = false;
-		this.parents = new Object[0];
+		
 	}
-	public void setLevel(int level){
-		this.level = level;
+	public void setLevel(byte level){
+		if (level <= 11){
+			this.level = level;
+		}
+		else{
+			this.level = 10;
+		}
+	}
+	public byte getLevel(){
+		return this.level;
 	}
 	public void setCharging(boolean needsCharging, int chargingTime){
 		this.needsCharging = needsCharging;
@@ -35,11 +40,23 @@ public class AlchemyGun extends Item{
 			this.chargingTime = 0;
 		}
 	}
+	public boolean getNeedsCharging(){
+		return this.needsCharging;
+	}
+	public int getChargingTime(){
+		return this.chargingTime;
+	}
 	public void setOneShot(boolean oneUse){
 		this.oneUse = oneUse;
 	}
+	public boolean getOneUse(){
+		return this.oneUse;
+	}
 	public void setParents(Object[] parents){
 		this.parents = parents;
+	}
+	public Object[] getParents(){
+		return this.parents;
 	}
 
 }
