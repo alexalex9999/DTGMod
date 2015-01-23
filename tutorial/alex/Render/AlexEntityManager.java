@@ -8,6 +8,7 @@ import tutorial.alex.Entity.EntityStorageShotgunBullet;
 import tutorial.alex.Entity.EntityTest;
 import tutorial.alex.Entity.EntityTwin;
 import net.minecraft.entity.EntityList;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class AlexEntityManager {
@@ -28,7 +29,8 @@ public class AlexEntityManager {
 	public static void intitializeEntities(){
 		registerEntity(EntityTest.class, "entityTest");
 		registerEntity(EntityTwin.class, "entityTwin");
-		EntityRegistry.registerModEntity(EntityStdBullet.class, "Standard Bullet", EntityRegistry.findGlobalUniqueEntityId(), AlexMainRegistry.instance, 64, 10, true);
-		EntityRegistry.registerModEntity(EntityStorageShotgunBullet.class, "Storage Shotgun Bullet", EntityRegistry.findGlobalUniqueEntityId(), AlexMainRegistry.instance, 64, 10, true);
+		int entityID = EntityRegistry.findGlobalUniqueEntityId();
+		EntityRegistry.registerModEntity(EntityStorageShotgunBullet.class, "Storage Shotgun Bullet", entityID, AlexMainRegistry.instance, 64, 10, true);
+		EntityRegistry.registerModEntity(EntityStdBullet.class, "Standard Bullet", entityID+1, AlexMainRegistry.instance, 64, 10, true);
 	}
 }
