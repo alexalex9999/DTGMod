@@ -17,40 +17,23 @@ public class EntityStorageShotgunBullet extends EntityThrowable{
 	
 	public Block insertedBlock;
 	public Item insertedItem;
-	public EntityStorageShotgunBullet(World p_i1776_1_, Block insertedBlock) {
+	public EntityStorageShotgunBullet(World p_i1776_1_) {
 		super(p_i1776_1_);
-		this.insertedBlock = insertedBlock;
 		setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
 	}
-	
-	public EntityStorageShotgunBullet(World p_i1776_1_, Item insertedItem) {
-		super(p_i1776_1_);
-		this.insertedItem = insertedItem;
-		setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
-	}
-	
-	public EntityStorageShotgunBullet(World par1World, EntityLivingBase par2EntityLivingBase, Block insertedBlock){
+	public EntityStorageShotgunBullet(World par1World, EntityLivingBase par2EntityLivingBase){
         super(par1World, par2EntityLivingBase);
-		this.insertedBlock = insertedBlock;
 		setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
 	}
-	
-	public EntityStorageShotgunBullet(World par1World, EntityLivingBase par2EntityLivingBase, Item insertedItem){
-        super(par1World, par2EntityLivingBase);
-		this.insertedItem = insertedItem;
-		setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
-	}
-	
-	public EntityStorageShotgunBullet(World par1World, double par2, double par4, double par6, Block insertedBlock){
+	public EntityStorageShotgunBullet(World par1World, double par2, double par4, double par6){
         super(par1World, par2, par4, par6);
-        this.insertedBlock = insertedBlock;
         setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
 	}
-	
-	public EntityStorageShotgunBullet(World par1World, double par2, double par4, double par6, Item insertedItem){
-        super(par1World, par2, par4, par6);
-        this.insertedItem = insertedItem;
-        setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
+	public void setInsertedBlock(Block inBlock){
+		this.insertedBlock = inBlock;
+	}
+	public void setInsertedItem(Item inItem){
+		this.insertedItem = inItem;
 	}
 	@Override
 	protected void onImpact(MovingObjectPosition pos) {

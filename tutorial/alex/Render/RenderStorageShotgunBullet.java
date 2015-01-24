@@ -23,66 +23,29 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.ForgeHooksClient;
 
 public class RenderStorageShotgunBullet extends Render{
-	private final ResourceLocation texture = new ResourceLocation("/item/arrows.png");
+	private EntityItem insEntityItem;
+	private ItemStack  bulletItemStack;
+	private RenderItem rendItem;
 	public RenderStorageShotgunBullet(){
+		rendItem = new RenderItem();
 	 }
 	@Override
-	protected ResourceLocation getEntityTexture(Entity entity) {
-		// this method should return your texture, which may be different based
-		// on certain characteristics of your custom entity; if that is the case,
-		// you may want to make a second method that takes your class:
-		return getCustomTexture((EntityStorageShotgunBullet) entity);
-	}
-	
-	private ResourceLocation getCustomTexture(EntityStorageShotgunBullet entity) {
-		// now you have access to your custom entity fields and methods, if any,
-		// and can base the texture to return upon those
-		return texture;
-	}
+	protected ResourceLocation getEntityTexture(Entity p_110775_1_)
+    {
+        return this.getEntityTexture(insEntityItem);
+    }
 	@Override
-	public void doRender(Entity par1EntityArrow, double par2,
+	public void doRender(Entity par1EntityStorageShotgun, double par2,
 			double par4, double par6, float p_76986_8_,
 			float par9) {
-		 this.bindTexture(texture);
-		 GL11.glPushMatrix();
-		 GL11.glTranslatef((float)par2, (float)par4, (float)par6);
-		 GL11.glRotatef(par1EntityArrow.prevRotationYaw + (par1EntityArrow.rotationYaw - par1EntityArrow.prevRotationYaw) * par9 - 90.0F, 0.0F, 1.0F, 0.0F);
-		 GL11.glRotatef(par1EntityArrow.prevRotationPitch + (par1EntityArrow.rotationPitch - par1EntityArrow.prevRotationPitch) * par9, 0.0F, 0.0F, 1.0F);
-		 Tessellator tessellator = Tessellator.instance;
-		 byte b0 = 0;
-		 float f2 = 0.0F;
-		 float f3 = 0.5F;
-		 float f4 = (float)(0 + b0 * 10) / 32.0F;
-		 float f5 = (float)(5 + b0 * 10) / 32.0F;
-		 float f6 = 0.0F;
-		 float f7 = 0.15625F;
-		 float f8 = (float)(5 + b0 * 10) / 32.0F;
-		 float f9 = (float)(10 + b0 * 10) / 32.0F;
-		 float f10 = 0.05625F;
-		 GL11.glEnable(GL12.GL_RESCALE_NORMAL);
-		 float f11 = 0.0f - par9;
-		 if (f11 > 0.0F)
-		 {
-		   float f12 = -MathHelper.sin(f11 * 3.0F) * f11;
-		   GL11.glRotatef(f12, 0.0F, 0.0F, 1.0F);
+		 
+		 if (((EntityStorageShotgunBullet) par1EntityStorageShotgun).insertedBlock != null){
+			 bulletItemStack = new ItemStack(((EntityStorageShotgunBullet) par1EntityStorageShotgun).insertedBlock);
 		 }
-		 GL11.glRotatef(45.0F, 1.0F, 0.0F, 0.0F);
-		 GL11.glScalef(f10, f10, f10);
-		 GL11.glTranslatef(-4.0F, 0.0F, 0.0F);
-		 GL11.glNormal3f(f10, 0.0F, 0.0F);
-		 for (int i = 0; i < 4; ++i)
-		 {
-		   GL11.glRotatef(90.0F, 1.0F, 0.0F, 0.0F);
-		   GL11.glNormal3f(0.0F, 0.0F, f10);
-		   tessellator.startDrawingQuads();
-		   tessellator.addVertexWithUV(-8.0D, -2.0D, 0.0D, (double)f2, (double)f4);
-		   tessellator.addVertexWithUV(8.0D, -2.0D, 0.0D, (double)f3, (double)f4);
-		   tessellator.addVertexWithUV(8.0D, 2.0D, 0.0D, (double)f3, (double)f5);
-		   tessellator.addVertexWithUV(-8.0D, 2.0D, 0.0D, (double)f2, (double)f5);
-		   tessellator.draw();
+		 else{
+			 bulletItemStack = new ItemStack(((EntityStorageShotgunBullet) par1EntityStorageShotgun).insertedItem);
 		 }
-		 GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		 GL11.glPopMatrix();
-		
+		 insEntityItem = new EntityItem(par1EntityStorageShotgun.worldObj, par2, par4, par6, bulletItemStack);
+		 rendItem.doRender(insEntityItem, par2, par4, par6, p_76986_8_, par9);		
 	}
 }

@@ -31,10 +31,14 @@ public class StorageShotgun extends AlchemyGun{
 	      if (!par2World.isRemote)
 	      {
 	    	  if (insertedBlock != null){
-	    		  par2World.spawnEntityInWorld(new EntityStorageShotgunBullet(par2World, par3EntityPlayer, insertedBlock));
+	    		  EntityStorageShotgunBullet newBullet = new EntityStorageShotgunBullet(par2World, par3EntityPlayer);
+	    		  newBullet.setInsertedBlock(insertedBlock);
+	    		  par2World.spawnEntityInWorld(newBullet);
 	    	  }
 	    	  else if (insertedItem != null){
-	    		  par2World.spawnEntityInWorld(new EntityStorageShotgunBullet(par2World, par3EntityPlayer, insertedItem));
+	    		  EntityStorageShotgunBullet newBullet = new EntityStorageShotgunBullet(par2World, par3EntityPlayer);
+	    		  newBullet.setInsertedItem(insertedItem);
+	    		  par2World.spawnEntityInWorld(newBullet);
 	    	  }
 	      }
 	      return par1ItemStack;
