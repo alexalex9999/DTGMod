@@ -32,12 +32,12 @@ public class StorageShotgun extends AlchemyGun{
 	      {
 	    	  if (insertedBlock != null){
 	    		  EntityStorageShotgunBullet newBullet = new EntityStorageShotgunBullet(par2World, par3EntityPlayer);
-	    		  newBullet.setInsertedBlock(insertedBlock);
+	    		  newBullet.setInsertedObject(insertedBlock);
 	    		  par2World.spawnEntityInWorld(newBullet);
 	    	  }
 	    	  else if (insertedItem != null){
 	    		  EntityStorageShotgunBullet newBullet = new EntityStorageShotgunBullet(par2World, par3EntityPlayer);
-	    		  newBullet.setInsertedItem(insertedItem);
+	    		  newBullet.setInsertedObject(insertedItem);
 	    		  par2World.spawnEntityInWorld(newBullet);
 	    	  }
 	      }

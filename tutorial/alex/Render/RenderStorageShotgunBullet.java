@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemCloth;
 import net.minecraft.item.ItemStack;
@@ -39,13 +40,14 @@ public class RenderStorageShotgunBullet extends Render{
 			double par4, double par6, float p_76986_8_,
 			float par9) {
 		 
-		 if (((EntityStorageShotgunBullet) par1EntityStorageShotgun).insertedBlock != null){
-			 bulletItemStack = new ItemStack(((EntityStorageShotgunBullet) par1EntityStorageShotgun).insertedBlock);
+		 if (((EntityStorageShotgunBullet) par1EntityStorageShotgun).getInsertedObject() instanceof Block){
+		   bulletItemStack = new ItemStack((Block) (((EntityStorageShotgunBullet) par1EntityStorageShotgun).getInsertedObject()));
 		 }
-		 else{
-			 bulletItemStack = new ItemStack(((EntityStorageShotgunBullet) par1EntityStorageShotgun).insertedItem);
+		 else if (((EntityStorageShotgunBullet) par1EntityStorageShotgun).getInsertedObject() instanceof Item){
+		   bulletItemStack = new ItemStack((Item) (((EntityStorageShotgunBullet) par1EntityStorageShotgun).getInsertedObject()));;
 		 }
 		 insEntityItem = new EntityItem(par1EntityStorageShotgun.worldObj, par2, par4, par6, bulletItemStack);
+		 System.out.println(this.renderManager.renderEngine.getResourceLocation(insEntityItem.getEntityItem().getItemSpriteNumber()));
 		 rendItem.doRender(insEntityItem, par2, par4, par6, p_76986_8_, par9);		
 	}
 }

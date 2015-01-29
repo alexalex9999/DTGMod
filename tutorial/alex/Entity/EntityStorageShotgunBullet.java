@@ -15,8 +15,8 @@ import net.minecraft.world.World;
 
 public class EntityStorageShotgunBullet extends EntityThrowable{
 	
-	public Block insertedBlock;
-	public Item insertedItem;
+	private static Block insertedBlock;
+	private static Item insertedItem;
 	public EntityStorageShotgunBullet(World p_i1776_1_) {
 		super(p_i1776_1_);
 		setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
@@ -29,11 +29,24 @@ public class EntityStorageShotgunBullet extends EntityThrowable{
         super(par1World, par2, par4, par6);
         setThrowableHeading(this.motionX, this.motionY, this.motionZ, 7.5F, 1.0F);
 	}
-	public void setInsertedBlock(Block inBlock){
-		this.insertedBlock = inBlock;
+	public static Object getInsertedObject(){
+		if (insertedBlock != null){
+			return insertedBlock;
+		}
+		else{
+			return insertedItem;
+		}
 	}
-	public void setInsertedItem(Item inItem){
-		this.insertedItem = inItem;
+	public static void setInsertedObject(Object newObject){
+		if (newObject instanceof Block == false & newObject instanceof Item == false){
+			throw new java.lang.IllegalArgumentException("Object in EntityStorageShotgunBullet not either a Block or an Item");
+		}
+		else if (newObject instanceof Block){
+			insertedBlock = (Block) newObject;
+		}
+		else {
+			insertedItem = (Item) newObject;
+		}
 	}
 	@Override
 	protected void onImpact(MovingObjectPosition pos) {
